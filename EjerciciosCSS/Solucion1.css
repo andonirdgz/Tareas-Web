@@ -1,0 +1,25 @@
+/* 
+1.- Ejercicio Cambiar el color del texto de todos los parrafos a rojo
+2.- Ahora, agrega el fondo a todos los parrafos, debe ser amarillo
+3.- Exclusivamente al parrafo con id="p3" coloca el fondo verde
+4.- Cambiar el color del texto del elemento con id = "p3" a  blanco
+5.- Cambiar el color del texto de la clase "colortext" a color azul 
+*/
+
+p {
+   /* 1.- Ejercicio Cambiar el color del texto de todos los parrafos a rojo */
+   color: red;
+   /* 2.- Ahora, agrega el fondo a todos los parrafos, debe ser amarillo */
+   background-color: yellow;
+}
+
+p#p3 {
+   /* 3.- Exclusivamente al parrafo con id="p3" coloca el fondo verde */
+   background-color: green;
+   /* 4.- Cambiar el color del texto del elemento con id = "p3" a  blanco */
+   color: white;
+}
+
+.colortext {
+   color: blue;
+}

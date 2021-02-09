@@ -1,0 +1,16 @@
+/* 
+1.-Cambia el color del texto de todos los parrafos y del encabezado h1
+   Agrupalos para minimizar el código (el color puede ser cualquiera en formato hexadecimal)
+2.- Para el DIV que tiene el id="main" agrega las siguientes propiedades
+  a) ancho 250px
+  b) alto 300px
+  c) borde 2px de color negro
+3.- Observa como se ve, ahora para el DIV que tiene el id="main" agrega las siguientes propiedades
+    display: flex;
+    align-items: flex-start;
+4.- Observa las diferencias
+5.- Para el DIV que tiene el id="myBlueDiv", utiliza la propiedad align-self:center; 
+6.- Aqui en los comentarios, coloca una descripción de lo que hace la propiedad "flex"
+Comentarios:  
+
+*/
