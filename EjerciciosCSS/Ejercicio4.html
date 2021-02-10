@@ -2,6 +2,10 @@
 1.- Asegure que el archivo "border.png" exista y se encuentre en la misma ruta
 2.- Revise la resolución de la imagen ¿De que tamaño es? es decir, cual es el ancho y alto de la imagen
     ¿qué características tiene el archivo png? 
+
+   ! R1= La imagen es de 81x81. 81 de ancho y 81 de alto.
+   ! R2= Las caracteristicas principales de los archivos png pueden ser de alta calidad y ser transparentes. Osea pueden incluir pixeles vacios.
+
 3.- Para el id="borderimg1" coloque las siguientes propiedades
     border: 10px solid transparent;
     padding: 20px;
@@ -12,26 +16,74 @@
     border-image: url(border.png) 15 stretch; 
 6.- Concluya, investigue su funcionamiento. 
 Comentario Respuesta: 
-
+! R= la propiedad border-image permite ponerle una imagen en el borde del elemento.
+!     Esta cuenta de 3 "parametros" principales que son la imagen, el tamaño del slice y la forma de repetir.
+!    - La imagen se pasa por medio de un URL haciendo referencia al archivo de la imagen
+!    - El slice divide la imagen en 9 partes (4 esquinas, 4 lados, y 1 centro) a este se le pasa un valor que puede ser..
+!     un numero o un porcentage el  cual indica donde se corta la imagen para crear el borde.
+!    - La forma de repetir puede ser de 4 formas:
+!           - strech : donde se la parte es expandida para llenar la parte del elemento
+!           - repeat : la imagen repite la imagen hasta llenar la parte del elemento, dividiedo o cortando partes si es necesario.
+!           - round  : la imagen realiza lo mismo que repeat pero se ajusta para evitar cortar las partes de la imagen.
+!           - space  : crea espacio entre partes de la imagen si esta no se ajusta perfecto al borde.
 
 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 4</title>
-  </head>
-  <body>
-    <p id="borderimg1">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi saepe
-      dignissimos alias laudantium similique doloribus est animi impedit modi
-      quae molestiae autem fuga, ut laborum, cumque adipisci? Laboriosam,
-      inventore sunt. Unde iusto quasi magnam voluptas error minima aspernatur
-      neque harum ipsum delectus. Dolores vero hic veritatis beatae culpa esse
-      enim aspernatur possimus non, nesciunt tempore nostrum quis, vel
-      necessitatibus saepe!
-    </p>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicio 4</title>
+	</head>
+	<body>
+		<p
+			id="borderimg1"
+			style="
+				border: 10px solid transparent;
+				padding: 20x;
+				border-image: url(./border.png) 30 space;
+			"
+		>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi saepe
+			dignissimos alias laudantium similique doloribus est animi impedit modi
+			quae molestiae autem fuga, ut laborum, cumque adipisci? Laboriosam,
+			inventore sunt. Unde iusto quasi magnam voluptas error minima aspernatur
+			neque harum ipsum delectus. Dolores vero hic veritatis beatae culpa esse
+			enim aspernatur possimus non, nesciunt tempore nostrum quis, vel
+			necessitatibus saepe!
+		</p>
+		<p
+			id="borderimg2"
+			style="
+				border: 10px solid transparent;
+				padding: 20x;
+				border-image: url(./border.png) 15 round;
+			"
+		>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi saepe
+			dignissimos alias laudantium similique doloribus est animi impedit modi
+			quae molestiae autem fuga, ut laborum, cumque adipisci? Laboriosam,
+			inventore sunt. Unde iusto quasi magnam voluptas error minima aspernatur
+			neque harum ipsum delectus. Dolores vero hic veritatis beatae culpa esse
+			enim aspernatur possimus non, nesciunt tempore nostrum quis, vel
+			necessitatibus saepe!
+		</p>
+		<p
+			id="borderimg3"
+			style="
+				border: 10px solid transparent;
+				padding: 20x;
+				border-image: url(./border.png) 15 stretch;
+			"
+		>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi saepe
+			dignissimos alias laudantium similique doloribus est animi impedit modi
+			quae molestiae autem fuga, ut laborum, cumque adipisci? Laboriosam,
+			inventore sunt. Unde iusto quasi magnam voluptas error minima aspernatur
+			neque harum ipsum delectus. Dolores vero hic veritatis beatae culpa esse
+			enim aspernatur possimus non, nesciunt tempore nostrum quis, vel
+			necessitatibus saepe!
+		</p>
+	</body>
 </html>
