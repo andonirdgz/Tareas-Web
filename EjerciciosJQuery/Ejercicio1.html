@@ -17,32 +17,55 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 1 JQuery</title>
-    <style>
-      .color_verde {
-        color: green;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Titulo 1</h1>
-    <p class="color_verde">Parrafo color verde</p>
-    <button id="btnMuestraOculta">Oculta / Muestra</button>
-    <p id="pTest">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis at
-      eligendi nobis laborum consequatur cum perferendis illum iure minima
-      inventore, nihil quas eveniet rerum fuga ullam! Sunt vel amet est. Hic
-      quaerat quis repellendus optio necessitatibus, natus, autem perferendis
-      amet, magnam dolorem maxime numquam facere expedita veritatis non quisquam
-      aspernatur quae nostrum vitae mollitia incidunt repellat. Veritatis labore
-      qui quos.
-    </p>
-    <br /><br />
-    <hr />
-    <button id="btnCambiaColor">Cambia Color Parrafo 1</button>
-  </body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Ejercicio 1 JQuery</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <style>
+         .color_verde {
+            color: green;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Titulo 1</h1>
+      <p class="color_verde">Parrafo color verde</p>
+      <button id="btnMuestraOculta">Oculta / Muestra</button>
+      <p id="pTest">
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis at eligendi
+         nobis laborum consequatur cum perferendis illum iure minima inventore, nihil quas
+         eveniet rerum fuga ullam! Sunt vel amet est. Hic quaerat quis repellendus optio
+         necessitatibus, natus, autem perferendis amet, magnam dolorem maxime numquam
+         facere expedita veritatis non quisquam aspernatur quae nostrum vitae mollitia
+         incidunt repellat. Veritatis labore qui quos.
+      </p>
+      <br /><br />
+      <hr />
+      <button id="btnCambiaColor">Cambia Color Parrafo 1</button>
+   </body>
+
+   <script>
+      //  Intruccion 1
+      $(function () {
+         console.log("Página cargada");
+      });
+
+      // Instruccion 2
+      $("#btnMuestraOculta").click(() => {
+         let parrafo = $("#pTest");
+         if (parrafo.is(":visible")) {
+            parrafo.hide(2000);
+         } else {
+            parrafo.show(2000);
+         }
+      });
+
+      // Instruiccion 3
+      $("#btnCambiaColor").click(() => {
+         $(".color_verde").css("background", "yellow");
+         $("#btnCambiaColor").prop("disabled", true);
+      });
+   </script>
 </html>
