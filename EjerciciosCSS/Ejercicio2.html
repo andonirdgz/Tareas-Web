@@ -13,34 +13,40 @@
 6.- Aqui en los comentarios, coloca una descripción de lo que hace la propiedad "flex"
 Comentarios: 
 
-
+   Lo que hace es que convierte a todos sus elementos contenidos dentro del div con el id="main" en
+   cajas flexibles, esto hace que se ajusten automaticamente lo mejor posible al espacio disponible
+   que en este caso son 250px de ancho y 300px de alto, por ultimo con el align-tems: flex-start
+   sirve para alinear los elementos al inicio del contenedor
 
 
 -->
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Ejercicio 2</title>
-      <link rel="stylesheet" href="./Solucion2.css" type="text/css" />
-   </head>
-   <body>
-      <div class="instruccion1">
-         <h1>Encabezado 1</h1>
-         <p>Parrafo 1</p>
-         <p>Parrafo 2</p>
-         <p>Parrafo 3</p>
-         <p>Parrafo 4</p>
-      </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ejercicio 2</title>
+		<!-- Referencia a las soluciones -->
+		<link rel="stylesheet" href="./Solucion2.css" type="text/css" />
+	</head>
+	<body>
+		<div class="instruccion1">
+			<h1>Encabezado 1</h1>
+			<p>Parrafo 1</p>
+			<p>Parrafo 2</p>
+			<p>Parrafo 3</p>
+			<p>Parrafo 4</p>
+		</div>
 
-      <h2>Encabezado 2</h2>
+		<h2>Encabezado 2</h2>
 
-      <div id="main">
-         <div style="background-color: coral">RED</div>
-         <div style="background-color: lightblue" id="myBlueDiv">BLUE</div>
-         <div style="background-color: lightgreen">Green div with more content.</div>
-      </div>
-   </body>
+		<div id="main">
+			<div style="background-color: coral">RED</div>
+			<div style="background-color: lightblue" id="myBlueDiv">BLUE</div>
+			<div style="background-color: lightgreen">
+				Green div with more content.
+			</div>
+		</div>
+	</body>
 </html>
